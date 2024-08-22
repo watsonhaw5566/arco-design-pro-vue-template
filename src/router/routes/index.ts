@@ -1,13 +1,20 @@
 import type { RouteRecordNormalized } from 'vue-router';
 
-const modules = import.meta.glob('./modules/*.ts', { eager: true });
-const externalModules = import.meta.glob('./externalModules/*.ts', {
-  eager: true,
+const modules = import.meta.webpackContext('./modules', {
+  // 是否搜索子目录
+  recursive: false,
+  regExp: /\.ts$/,
 });
 
-function formatModules(_modules: any, result: RouteRecordNormalized[]) {
-  Object.keys(_modules).forEach((key) => {
-    const defaultModule = _modules[key].default;
+const externalModules = import.meta.webpackContext('./externalModules', {
+  recursive: false,
+  regExp: /\.ts$/,
+});
+
+function formatModules(context: any, result: RouteRecordNormalized[]): [] {
+  context.keys().forEach((path) => {
+    const mod = context(path);
+    const defaultModule = mod.default;
     if (!defaultModule) return;
     const moduleList = Array.isArray(defaultModule)
       ? [...defaultModule]
@@ -18,7 +25,6 @@ function formatModules(_modules: any, result: RouteRecordNormalized[]) {
 }
 
 export const appRoutes: RouteRecordNormalized[] = formatModules(modules, []);
-
 export const appExternalRoutes: RouteRecordNormalized[] = formatModules(
   externalModules,
   []

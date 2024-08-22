@@ -6,14 +6,13 @@
  * Although the Pro project is full of imported components, this plugin will be used by default.
  * 虽然Pro项目中是全量引入组件，但此插件会默认使用。
  */
-import Components from 'unplugin-vue-components/vite';
+import Components from 'unplugin-vue-components/rspack';
 import { ArcoResolver } from 'unplugin-vue-components/resolvers';
 
 export default function configArcoResolverPlugin() {
-  const arcoResolverPlugin = Components({
+  return Components({
     dirs: [], // Avoid parsing src/components.  避免解析到src/components
     deep: false,
     resolvers: [ArcoResolver()],
   });
-  return arcoResolverPlugin;
 }

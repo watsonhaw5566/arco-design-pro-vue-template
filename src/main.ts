@@ -13,6 +13,7 @@ import App from './App.vue';
 // https://arco.design/docs/designlab/use-theme-package
 import '@/assets/style/global.less';
 import '@/api/interceptor';
+import 'default-passive-events';
 
 const app = createApp(App);
 
