@@ -26,7 +26,7 @@ export default defineConfig({
     // 样式按需引入
     transformImport: [
       {
-        libraryName: 'arco-design-vue',
+        libraryName: '@arco-design/web-vue',
         libraryDirectory: 'es',
         style: 'css',
       },
