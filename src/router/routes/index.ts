@@ -11,7 +11,10 @@ const externalModules = import.meta.webpackContext('./externalModules', {
   regExp: /\.ts$/,
 });
 
-function formatModules(context: any, result: RouteRecordNormalized[]): [] {
+function formatModules(
+  context: any,
+  result: RouteRecordNormalized[]
+): RouteRecordNormalized[] {
   context.keys().forEach((path) => {
     const mod = context(path);
     const defaultModule = mod.default;
