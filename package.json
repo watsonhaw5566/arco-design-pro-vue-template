@@ -47,7 +47,6 @@
     "vue-router": "^4.0.14"
   },
   "devDependencies": {
-    "@arco-plugins/vite-vue": "^1.4.5",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@rsbuild/core": "1.0.1-beta.15",
