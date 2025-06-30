@@ -49,13 +49,13 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
-    "@rsbuild/core": "1.0.1-beta.15",
+    "@rsbuild/core": "1.4.2",
     "@rsbuild/plugin-babel": "1.0.1-beta.15",
     "@rsbuild/plugin-image-compress": "^1.0.2",
-    "@rsbuild/plugin-less": "1.0.1-beta.15",
-    "@rsbuild/plugin-svgr": "1.0.1-beta.15",
-    "@rsbuild/plugin-vue": "1.0.1-beta.15",
-    "@rsbuild/plugin-vue-jsx": "1.0.1-beta.15",
+    "@rsbuild/plugin-less": "1.2.4",
+    "@rsbuild/plugin-svgr": "1.2.0",
+    "@rsbuild/plugin-vue": "1.0.7",
+    "@rsbuild/plugin-vue-jsx": "1.1.0",
     "@types/lodash": "^4.14.186",
     "@types/mockjs": "^1.0.7",
     "@types/nprogress": "^0.2.0",
@@ -83,7 +83,7 @@
     "stylelint-config-standard": "^29.0.0",
     "stylelint-order": "^5.0.0",
     "typescript": "^4.8.4",
-    "unplugin-vue-components": "^0.27.4",
+    "unplugin-vue-components": "^28.8.0",
     "vue-tsc": "^1.0.14"
   },
   "engines": {

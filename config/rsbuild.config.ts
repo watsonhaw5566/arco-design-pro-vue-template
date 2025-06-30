@@ -16,13 +16,6 @@ export default defineConfig({
     entry: {
       index: './src/main.ts',
     },
-    // 别名
-    alias: {
-      '@': resolve(__dirname, '../src'),
-      'assets': resolve(__dirname, '../src/assets'),
-      'vue': 'vue/dist/vue.esm-bundler.js', // compile template
-      'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js', // Resolve the i18n warning issue
-    },
     // 样式按需引入
     transformImport: [
       {
@@ -31,6 +24,15 @@ export default defineConfig({
         style: 'css',
       },
     ],
+  },
+  resolve: {
+    // 别名
+    alias: {
+      '@': resolve(__dirname, '../src'),
+      'assets': resolve(__dirname, '../src/assets'),
+      'vue': 'vue/dist/vue.esm-bundler.js', // compile template
+      'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js', // Resolve the i18n warning issue
+    },
   },
   // 生产优化
   performance: {
